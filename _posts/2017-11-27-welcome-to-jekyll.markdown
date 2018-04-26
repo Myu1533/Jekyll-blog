@@ -1,9 +1,18 @@
 ---
 layout: post
-title:  "写点什么？"
+title:  Jekyll Blog 上线
 date:   2017-11-27 17:30:01 +0800
-categories: 
+categories:
 ---
-从hexo跳到jekyll，为了简单化的blog系统，专注的写点东西
-学习的心得，技术的分享，或者翻译点东西，别闲着，多读，多写，多看
 
+从 Hexo 跳到 jekyll
+
+更喜欢 Jekyll 的简洁
+
+过去的文章都没有做迁移
+
+重新出发专注的写点东西
+
+学习的心得/技术的分享/翻译
+
+总之，记录起来

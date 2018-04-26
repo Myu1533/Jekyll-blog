@@ -1,15 +1,22 @@
 ---
 layout: post
-title:  "vue ssr 简介(译)"
+title:  vue ssr 简介(译)
 # date: {site.time}
-categories: 
+categories: translate
 ---
+
 ### Vue.js Server-Side Rendering Guide
-### Vue.js 服务端渲染指南 
-###### **Note:** this guide requires the following minimum versions of Vue and supporting libraries: 
+
+### Vue.js 服务端渲染指南
+
+###### **Note:** this guide requires the following minimum versions of Vue and supporting libraries:
+
 ###### **注：**该指南至少需要的最低版本的 Vue 核心库和支持库：
+
 ###### vue & vue-server-renderer >= 2.3.0
+
 ###### vue-router >= 2.5.0
+
 ###### vue-loader >= 12.0.0 & vue-style-loader >= 3.0.0
 
 If you have previously used Vue 2.2 with SSR, you will notice that the recommended code structure is
@@ -22,8 +29,10 @@ Your existing app should continue to work, but it's recommended to migrate to th
 
 你的应用会继续工作，但是规范将会迁移到新的推荐规范。
 
-### What is Server-Side Rendering (SSR)? 
+### What is Server-Side Rendering (SSR)?
+
 ### 什么是服务端渲染（SSR）？
+
 Vue.js is a framework for building client-side applications.
 
 Vue.js 是构建客户端应用的框架。
@@ -40,7 +49,8 @@ A server-rendered Vue.js app can also be considered "isomorphic" or "universal",
 
 一个服务端渲染的 Vue.js 应用能被认为是同构的或者是通用的，你应用的大部分代码是运行在服务端和客户端的。
 
-### Why SSR? 
+### Why SSR?
+
 ### 为什么要用 SSR？
 
 Compared to a traditional SPA (Single-Page Application),the advantage of SSR primarily lies in:
@@ -67,9 +77,12 @@ This means if you have content fetched asynchronously on pages where SEO is impo
 
 这意味着在重点 SEO 的页面是异步加载的，那么服务器渲染是必然的。
 
-#### Faster time-to-content, 
+#### Faster time-to-content,
+
 #### 更快的内容加载，
-#### especially on slow internet or slow devices. 
+
+#### especially on slow internet or slow devices.
+
 #### 特别是在低速网络或者运行慢的设备上。
 
 Server-rendered markup doesn't need to wait until all JavaScript has been downloaded and executed to be
@@ -81,8 +94,10 @@ This generally results in better user experience, and can be critical for applic
 
 这个结果在用户体验方面是更好的，也能用于评定渲染时间直接关系到转换率的应用。
 
-### There are also some trade-offs to consider when using SSR: 
+### There are also some trade-offs to consider when using SSR:
+
 ### 在用 SSR 的时候,有几点需要权衡：
+
 Development constraints. Browser-specific code can only be used inside certain lifecycle hooks;some external libraries may need special treatment to be able to run in a server-rendered app.
 
 开发限制。依赖浏览器特性的代码只能在内部关键的生命周期钩子上；一些外部库在服务端渲染应用上也需要特殊处理。
@@ -95,8 +110,10 @@ Unlike a fully static SPA that can be deployed on any static file server,a serve
 
 不在像完整个的静态单页应用该可以被发布在任何静态服务器上，服务端渲染应用更需要一个 node 服务环境。
 
-### More server-side load. 
+### More server-side load.
+
 ### 更多的服务端加载。
+
 Rendering a full app in Node.js is obviously going to be more CPU-intensive than just serving static files,so if you expect high traffic, be prepared for corresponding server load and wisely employ caching strategies.
 
 node 渲染一个完整应用，光服务静态文件就需要更多的密集型 CPU。因此如果你期望有高通信，就需要准备相应的服务载入和合理的使用缓存策略。
@@ -118,6 +135,7 @@ However, in cases where time-to-content is absolutely critical, SSR can help you
 然而，渲染时间是必要的评定标准，SSR 将帮助你在初始化表现上达到最好的可能。
 
 ### SSR vs Prerendering
+
 If you're only investigating SSR to improve the SEO of a handful of marketing pages (e.g. /
 , /about
 , /contact
@@ -141,8 +159,10 @@ It's been extensively tested with Vue apps - and in fact, [the creator](https://
 
 事实上，这已经被广泛的应用在 Vue 应用上，[创造者](https://github.com/chrisvfritz)来自于 Vue 核心代码团队。
 
-### About This Guide 
+### About This Guide
+
 ### 关于这份指南
+
 This guide is focused on server-rendered Single-Page Applications using Node.js as the server.
 
 这份指南专注于用 Node 作为服务器的服务器端渲染的单页应用。
