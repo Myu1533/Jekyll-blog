@@ -1,11 +1,13 @@
 ---
 layout: post
-title: 在window安装Jekyll
+title: 在windows上安装Jekyll
 # date: {site.time}
 categories: Jekyll
 ---
 
 ## 准备
+
+windows 10 X64
 
 Ruby环境：
 - [Ruby](https://rubyinstaller.org/downloads/) ，官方推荐安装<strong>Ruby+Devkit 2.4.X</strong>,保证扩展库的可用性
